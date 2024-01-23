@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b307b9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #00ff0d;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .task {
+            border: 1px solid #000000;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .label {
+            color: #000000;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .task-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .deadline, .priority {
+            font-size: 14px;
+            color: #000000;
+        }
+
+        button {
+            background-color: #fa0000;
+            color: #000000;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .completed {
+            opacity: 0.3;
+        }
+    </style>
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="task" id="task1">
+            <div class="task-header">
+                <h2>Task 1: Complete Data Structure Homework</h2>
+            </div>
+            <p>Finish the assigned project, ensuring all requirements are met.</p>
+            <div class="task-details">
+                <span class="deadline">Deadline: 10-02-2024</span>
+                <span class="priority">Priority: High</span>
+                <span class="label">Label: Academic</span>
+                <button onclick="completeTask('task1')">Complete</button>
+            </div>
+        </div>
+
+        <div class="task" id="task2">
+            <div class="task-header">
+                <h2>Task 2: Study for Computer Networks Exam</h2>
+            </div>
+            <p>Review lecture notes and textbooks to prepare for the upcoming computer networks exam.</p>
+            <div class="task-details">
+                <span class="deadline">Deadline: 15-02-24</span>
+                <span class="priority">Priority: High</span>
+                <span class="label">Label: Academic</span>
+                <button onclick="completeTask('task2')">Complete</button>
+            </div>
+        </div>
+        
+        <div class="task" id="task3">
+            <div class="task-header">
+                <h2>Task 3: Start personal coding project</h2>
+            </div>
+            <p>Initiate a personal coding project to apply and expand programming skills.</p>
+            <div class="task-details">
+                <span class="deadline">Deadline: 01-03-2024</span>
+                <span class="priority">Priority: Medium</span>
+                <span class="label">Label: Personal Development</span>
+                <button onclick="completeTask('task3')">Complete</button>
+            </div>
+        </div>
+
+        <div class="task" id="task4">
+            <div class="task-header">
+                <h2>Task 4: Attend Smart India Hackathon</h2>
+            </div>
+            <p>Register and attend the upcoming Smart India Hackathon to stay updated on industry trends.</p>
+            <div class="task-details">
+                <span class="deadline">Deadline: 05-03-2024</span>
+                <span class="priority">Priority: Medium</span>
+                <span class="label">Label: Professional Development</span>
+                <button onclick="completeTask('task4')">Complete</button>
+            </div>
+        </div>
+
+        <div class="task" id="task5">
+            <div class="task-header">
+                <h2>Task 5: Research Emerging Technologies</h2>
+            </div>
+            <p>Explore and research emerging technologies in the field of computer engineering.</p>
+            <div class="task-details">
+                <span class="deadline">Deadline: Ongoing</span>
+                <span class="priority">Priority: Low</span>
+                <span class="label">Label: Career Development</span>
+                <button onclick="completeTask('task5')">Complete</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function completeTask(taskId) {
+            const task = document.getElementById(taskId);
+            task.classList.add('completed');
+        }
+    </script>
+</body>
+</html>
